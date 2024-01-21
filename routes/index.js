@@ -64,7 +64,7 @@ router.post("/books", async (req, res) => {
 
 router.put("/books/:id", async (req, res) => {
   try {
-    const { bookName, author, publisher } = req.body;
+    const { bookName, author, publisher, description } = req.body;
     const { id } = req.params;
     await db
       .collection("libros")
